@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style = "height:2000px">
+
+    <div id = "text">Текст мазафака тут</div>
+    
+    <!-- 1 -->
+    <script>
+        const button = document.createElement("button");
+        button.textContent = "Скрыть эту кнопку";
+        button.onclick = function () {
+            this.hidden = true;
+        };
+
+        document.body.append(button);
+    </script>
+
+    <!-- 2 -->
+     <script>
+        const div = document.getElementById("text");
+        const button2 = document.createElement("button");
+        button2.textContent = "Скрыть текст";
+
+        button2.onclick = function () {
+        div.hidden = !div.hidden;
+        };
+
+        document.body.append(button2);
+    </script>
+
+    <!-- 3 -->
+    <script>
+    function toggleDiv() {
+        const div2 = document.getElementById("text");
+    
+        if (div2.style.display == "none") {
+            div2.style.display = "block";
+        } else {
+            div2.style.display = "none";
+        }
+    }
+    
+    const button3 = document.createElement("button");
+    button3.textContent = "Скрыть или отобразить";
+    button3.onclick = toggleDiv;
+    
+    document.body.append(button3);
+    </script>
+
+    <!-- 4 -->
+    <img src="https://jumpshare.com/s/yDwlDIhdl132wuVxlj9Q" id="moneh">
+    <script>
+        const moneh = document.getElementById("moneh");
+        document.body.onclick = (event) => {
+        const clickPos = event.clientX, clickPosY = event.clientY;
+        moneh.style.position = 'absolute';
+        moneh.style.left = clickPos + 'px';
+        moneh.style.top = clickPosY + 'px';
+}
+    </script>
+
+</body>
+</html>
